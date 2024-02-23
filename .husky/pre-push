@@ -1,1 +1,1 @@
-yarn lint && yarn typecheck && yarn test
+yarn lint && yarn typecheck && yarn test --watch=false
