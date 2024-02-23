@@ -6,8 +6,6 @@ import path from "path";
 export default defineConfig({
   plugins: [react()],
 
-  cacheDir: "./.vite",
-
   server: {
     port: 3000,
     host: true,
