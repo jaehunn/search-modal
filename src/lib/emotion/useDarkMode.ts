@@ -1,8 +1,13 @@
 import { useLayoutEffect, useState } from "react";
+
 import { THEME } from "./theme";
 
 export const useDarkMode = (defaultTheme = THEME["LIGHT"]) => {
   const [theme, setTheme] = useState(defaultTheme);
+
+  const changeTheme = (type: keyof typeof THEME) => {
+    setTheme(THEME[type]);
+  };
 
   useLayoutEffect(() => {
     /** @see https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList */
@@ -21,5 +26,6 @@ export const useDarkMode = (defaultTheme = THEME["LIGHT"]) => {
 
   return {
     theme,
+    changeTheme,
   };
 };
