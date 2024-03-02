@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 import { render as RTLrender } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-const render = (element: ReactElement) => {
+export const render = (element: ReactElement) => {
   const user = userEvent.setup();
 
   return {
@@ -10,5 +10,3 @@ const render = (element: ReactElement) => {
     ...RTLrender(element),
   };
 };
-
-export default render;
